@@ -1,12 +1,13 @@
 require 'yaml'
 require_relative 'valera'
 require_relative 'states/load_configs'
+require_relative 'states/leave_game'
 
 class Game
   def run
     state = GameStates::LoadConfigs.new
 
-    loop do
+    until state.is_a? GameStates::LeaveGame
       state.render
       state = state.next
     end

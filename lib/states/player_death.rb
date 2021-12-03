@@ -5,8 +5,8 @@ require_relative 'leave_game'
 module GameStates
   class PlayerDeath < Base
     def render
-      puts "1) Reset player"
-      puts "2) Quit the game"
+      puts '1) Reset player'
+      puts '2) Quit the game'
     end
 
     def next

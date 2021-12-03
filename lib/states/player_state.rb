@@ -6,7 +6,7 @@ module GameStates
   class PlayerState < Base
     def render
       if valera_is_dead?
-        puts "Valera is dead :("
+        puts 'Valera is dead :('
       else
         valera = context[:valera]
         puts "Valera params: Health [#{valera.health}]
@@ -16,10 +16,10 @@ module GameStates
     end
 
     def next
-      if !valera_is_dead?
-        SelectAction.new context
-      else
+      if valera_is_dead?
         PlayerDeath.new context
+      else
+        SelectAction.new context
       end
     end
 
