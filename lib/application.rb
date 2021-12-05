@@ -12,7 +12,7 @@ class Application
   end
 
   def open_config
-    file = File.read('/home/misha/Рабочий стол/valera-master/config.json')
+    file = File.read('config.json')
     JSON.parse(file)
   end
 
