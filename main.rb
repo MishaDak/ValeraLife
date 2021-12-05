@@ -1,3 +1,3 @@
-require_relative '../lib/e'
+require './lib/application'
 
-Game.new.run
+Application.new.run
