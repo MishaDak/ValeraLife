@@ -13,7 +13,7 @@ class Valera
   end
 
   def dead?
-    health == 0
+    health.zero?
   end
 
   def health=(health)

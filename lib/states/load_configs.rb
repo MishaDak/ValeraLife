@@ -6,7 +6,7 @@ require_relative '../configs/action_config'
 module GameStates
   class LoadConfigs < Base
     def render
-      puts "Load actions..."
+      puts 'Load actions...'
     end
 
     def next
