@@ -45,7 +45,7 @@ RSpec.describe Game do
         game.choose_action!(action_hash, arr_action).call(game.valera)
       rescue SystemExit
         nil
-      end.to output("Game Over\n").to_stderr
+      end.to output("See you next time\n").to_stderr
     end
     it 'YOU DIED' do
       expect do

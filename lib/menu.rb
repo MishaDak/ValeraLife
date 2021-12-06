@@ -12,6 +12,6 @@ class Menu
     print "\t\tValera actions\n"
     @arr_action.map.with_index { |action, i| print "\t\t[#{i + 1}] - #{action}\n" }
     print "\t\t[0] - Exit\n"
-    print "Your action: "
+    print 'Your action: '
   end
 end

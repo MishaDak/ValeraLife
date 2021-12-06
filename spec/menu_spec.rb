@@ -2,8 +2,8 @@ require './lib/menu'
 
 RSpec.describe Menu do
   describe '#print_actions' do
-    msg = "(1) - Go work\n(2) - See nature\n(3) - See serial\n(4) - Go to bar
-(5) - Drink with marginals\n(6) - Sing\n(7) - Sleep\n(8) - Save\n(9) - Load\n(0) - Exit\n"
+    msg = "\t\tValera actions\n\t\t[1] - Go work\n\t\t[2] - See nature\n\t\t[3] - See serial\n\t\t[4] - Go to bar
+\t\t[5] - Drink with marginals\n\t\t[6] - Sing\n\t\t[7] - Sleep\n\t\t[8] - Save\n\t\t[9] - Load\n\t\t[0] - Exit\nYour action: "
     it 'Output menu' do
       expect do
         Menu.new.print_actions
