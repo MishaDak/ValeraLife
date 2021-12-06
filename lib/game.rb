@@ -13,7 +13,7 @@ class Game
     attr_reader :actions
   end
   def do_action!(status, action_item, action_hash, arr_action)
-    abort 'Game Over' if action_item.zero?
+    abort 'See you next time' if action_item.zero?
     selected_action_ = action_hash[arr_action[action_item - 1]]
     Actions.new.execute!(status, selected_action_)
   end

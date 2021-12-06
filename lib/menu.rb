@@ -9,7 +9,9 @@ class Menu
   end
 
   def print_actions
-    @arr_action.map.with_index { |action, i| print "(#{i + 1}) - #{action}\n" }
-    puts '(0) - Exit'
+    print "\t\tValera actions\n"
+    @arr_action.map.with_index { |action, i| print "\t\t[#{i + 1}] - #{action}\n" }
+    print "\t\t[0] - Exit\n"
+    print "Your action: "
   end
 end

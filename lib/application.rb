@@ -26,11 +26,12 @@ class Application
     action_hash = open_config
     arr_action = action_array(action_hash)
     loop do
-      print "HP: #{@valera.status['health']}\n"
+      print "\t\t\tValera stats\n"
+      print "\t\tHP: #{@valera.status['health']}\t\t"
       print "Mana: #{@valera.status['mana']}\n"
-      print "happienss: #{@valera.status['happienss']}\n"
+      print "\t\thappienss: #{@valera.status['happienss']}\t"
       print "Fatigue: #{@valera.status['fatigue']}\n"
-      print "Money: #{@valera.status['money']}\n\n"
+      print "\t\t\tMoney: #{@valera.status['money']}\n\n"
 
       @menu.print_actions
       @reader.read_action(@game)
