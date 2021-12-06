@@ -2,7 +2,7 @@ require_relative 'valera'
 
 class Menu
   def initialize
-    file = File.read('../valera/config.json')
+    file = File.read('config.json')
     action_hash = JSON.parse(file)
     @arr_action = []
     action_hash.each_key { |key| @arr_action.push key }
