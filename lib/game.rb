@@ -28,8 +28,8 @@ class Game
     valera
   end
 
-  def die_action()
-    abort "Good luck" if action_item == 0
+  def die_action
+    abort 'Good luck' if action_item.zero?
     @valera = Valera.new if action_item == 1
   end
 end

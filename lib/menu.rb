@@ -19,6 +19,6 @@ class Menu
     print "\t\tYou DIE, play new game or quit?\n"
     print "\t\t1 - New game\n"
     print "\t\t0 - Quit\n"
-    print "Your choose: "
+    print 'Your choose: '
   end
 end

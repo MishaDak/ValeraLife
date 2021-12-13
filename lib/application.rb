@@ -37,11 +37,11 @@ class Application
       @reader.read_action(@game)
       @valera = @game.choose_action!(action_hash, arr_action)
 
-      if @valera == false
-        @menu.print_died
-        @reader.read_action(@game)
-        @valera = @game.die_action()
-      end
+      next unless @valera == false
+
+      @menu.print_died
+      @reader.read_action(@game)
+      @valera = @game.die_action
     end
   end
 end

@@ -11,7 +11,7 @@ Metrics/MethodLength:
   Max: 20
 
 Metrics/AbcSize:
-  Max: 25
+  Max: 50
 
 Metrics/ParameterLists:
   MaxOptionalParameters: 5
