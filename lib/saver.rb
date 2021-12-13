@@ -1,18 +1,15 @@
 require 'json'
 
 class Saver
-  def self.save_game(status, filename)
+  def self.save_game(status)
+    puts 'enter file name: '
+    filename = "./saves/#{$stdin.gets.strip}.json"
     file = File.open(filename, 'w')
     file.write(JSON.dump(status))
     file.close
   end
 
-  def self.load_game(filename)
-    file = File.read(filename)
-    JSON.parse(file)
-  end
-
-  def self.save_load_menu(status, choice)
+  def self.load_game
     filename = ''
 
     loop do
@@ -20,15 +17,10 @@ class Saver
       filename = "./saves/#{$stdin.gets.strip}.json"
       break unless !File.file?(filename) && (choice == 2)
 
-      puts 'YOU DIED'
+      puts 'Files not found'
     end
 
-    case choice
-    when 1
-      save_game(status, filename)
-      status
-    when 2
-      load_game(filename)
-    end
+    file = File.read(filename)
+    @status = JSON.parse(file)
   end
 end

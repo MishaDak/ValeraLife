@@ -19,6 +19,7 @@ class Game
   end
 
   def choose_action!(action_hash, arr_action)
+    @valera.status = Saver.load_game if action_item == 9
     do_action!(@valera.status, @action_item, action_hash, arr_action)
     system('clear')
     @valera.fix_status!(@valera.status)
