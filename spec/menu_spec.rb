@@ -11,4 +11,16 @@ Your action: "
       end.to output(msg).to_stdout
     end
   end
+
+  describe '#print_died' do
+    msg = "\t\tYou DIE, play new game or quit?\n" \
+          "\t\t1 - New game\n" \
+          "\t\t0 - Quit\n" \
+          'Your choose: '
+    it 'Output exit' do
+      expect do
+        Menu.new.print_died
+      end.to output(msg).to_stdout
+    end
+  end
 end

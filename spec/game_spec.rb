@@ -62,10 +62,10 @@ RSpec.describe Game do
           'money' => 1000
         }
         game.action_item = 4
-        game.choose_action!(action_hash, arr_action).call(game.valera)
+        game.choose_action!(action_hash, arr_action)
       rescue SystemExit
         nil
-      end.to output("YOU DIED\n").to_stderr
+      end.to output('').to_stderr
     end
   end
 end

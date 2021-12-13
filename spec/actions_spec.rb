@@ -296,7 +296,7 @@ RSpec.describe Actions do
       save_action = { 'save' => {} }
       it {
         allow($stdin).to receive(:gets).and_return('test_save')
-        curr_status = Saver.save_load_menu(status, 2)
+        curr_status = Saver.load_game
         expect(Actions.new.execute!(curr_status, save_action)).to eq status
       }
     end
