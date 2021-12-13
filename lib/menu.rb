@@ -14,4 +14,11 @@ class Menu
     print "\t\t[0] - Exit\n"
     print 'Your action: '
   end
+
+  def print_died
+    print "\t\tYou DIE, play new game or quit?\n"
+    print "\t\t1 - New game\n"
+    print "\t\t0 - Quit\n"
+    print "Your choose: "
+  end
 end

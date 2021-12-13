@@ -23,8 +23,13 @@ class Game
     do_action!(@valera.status, @action_item, action_hash, arr_action)
     system('clear')
     @valera.fix_status!(@valera.status)
-    return abort 'YOU DIED' if @valera.dead?(@valera.status)
+    return @valera = false if @valera.dead?(@valera.status)
 
     valera
+  end
+
+  def die_action()
+    abort "Good luck" if action_item == 0
+    @valera = Valera.new if action_item == 1
   end
 end

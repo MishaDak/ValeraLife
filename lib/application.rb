@@ -38,8 +38,9 @@ class Application
       @valera = @game.choose_action!(action_hash, arr_action)
 
       if @valera == false
-        puts('The End')
-        exit
+        @menu.print_died
+        @reader.read_action(@game)
+        @valera = @game.die_action()
       end
     end
   end
